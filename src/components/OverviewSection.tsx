@@ -37,7 +37,8 @@ export default function OverviewSection({ onExplore }: OverviewSectionProps) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative h-[70vh] rounded-lg overflow-hidden border-2 border-primary/50 cyber-border"
+        className="relative h-[70vh] rounded-lg overflow-hidden border-2 border-primary/50 cyber-border cursor-pointer group"
+        onClick={onExplore}
       >
         {heroImages.map((image, index) => (
           <motion.div
@@ -45,7 +46,7 @@ export default function OverviewSection({ onExplore }: OverviewSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: index === currentIndex ? 1 : 0 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0"
+            className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
           >
             <img
               src={image.imageUrl}
