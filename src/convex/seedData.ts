@@ -43,6 +43,38 @@ export const seedAll = internalMutation({
 
     // Seed space objects
     await ctx.db.insert("spaceObjects", {
+      name: "Mercury",
+      type: "planet",
+      thumbnail: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?w=400",
+      images: ["https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?w=800"],
+      shortDesc: "The smallest and closest planet to the Sun.",
+      description: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets.",
+      facts: [
+        "Surface temperature: -173°C to 427°C",
+        "No moons or rings",
+        "One day lasts 59 Earth days"
+      ],
+      interestingFact: "Mercury has the most extreme temperature variations of any planet",
+      distance: "57.9 million km from Sun",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Venus",
+      type: "planet",
+      thumbnail: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400",
+      images: ["https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800"],
+      shortDesc: "The hottest planet with a toxic atmosphere.",
+      description: "Venus is the second planet from the Sun. It's named after the Roman goddess of love and beauty. Venus has a thick, toxic atmosphere filled with carbon dioxide and clouds of sulfuric acid.",
+      facts: [
+        "Surface temperature: 462°C average",
+        "Rotates backwards compared to other planets",
+        "One day lasts 243 Earth days"
+      ],
+      interestingFact: "Venus is the brightest natural object in Earth's night sky after the Moon",
+      distance: "108.2 million km from Sun",
+    });
+
+    await ctx.db.insert("spaceObjects", {
       name: "Earth",
       type: "planet",
       thumbnail: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=400",
@@ -104,6 +136,38 @@ export const seedAll = internalMutation({
       ],
       interestingFact: "Saturn's rings are only 10 meters thick in some places",
       distance: "1.4 billion km from Sun",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Uranus",
+      type: "planet",
+      thumbnail: "https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?w=400",
+      images: ["https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?w=800"],
+      shortDesc: "An ice giant tilted on its side.",
+      description: "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is unique in that it rotates on its side.",
+      facts: [
+        "Has 27 known moons",
+        "Rotates on its side (98° tilt)",
+        "Coldest planetary atmosphere: -224°C"
+      ],
+      interestingFact: "Uranus was the first planet discovered with a telescope in 1781",
+      distance: "2.9 billion km from Sun",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Neptune",
+      type: "planet",
+      thumbnail: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400",
+      images: ["https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800"],
+      shortDesc: "The windiest planet in the Solar System.",
+      description: "Neptune is the eighth and farthest known planet from the Sun. It's the fourth-largest planet by diameter and the third-most-massive planet. Neptune has the strongest winds in the Solar System.",
+      facts: [
+        "Has 14 known moons",
+        "Wind speeds up to 2,100 km/h",
+        "One orbit takes 165 Earth years"
+      ],
+      interestingFact: "Neptune was the first planet located through mathematical predictions rather than observation",
+      distance: "4.5 billion km from Sun",
     });
 
     await ctx.db.insert("spaceObjects", {
