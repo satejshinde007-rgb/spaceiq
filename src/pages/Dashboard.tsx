@@ -1,15 +1,23 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import OverviewSection from "@/components/OverviewSection";
 import InformationSection from "@/components/InformationSection";
 import QuizSection from "@/components/QuizSection";
 import { Orbit } from "lucide-react";
-import { useNavigate } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 
 export default function Dashboard() {
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("overview");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab && ["overview", "info", "quiz"].includes(tab)) {
+      setActiveTab(tab);
+    }
+  }, [searchParams]);
 
   return (
     <div className="min-h-screen bg-background scanline">

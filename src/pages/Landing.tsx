@@ -137,18 +137,21 @@ export default function Landing() {
                   title: "Immersive Overview",
                   desc: "Journey through stunning visuals of planets, stars, and galaxies",
                   color: "text-primary",
+                  path: "/dashboard?tab=overview",
                 },
                 {
                   icon: Sparkles,
                   title: "Cosmic Database",
                   desc: "Searchable information on celestial objects across the universe",
                   color: "text-secondary",
+                  path: "/dashboard?tab=info",
                 },
                 {
                   icon: Brain,
                   title: "Test Your IQ",
                   desc: "Challenge yourself with our interactive space knowledge quiz",
                   color: "text-accent",
+                  path: "/dashboard?tab=quiz",
                 },
               ].map((feature, i) => (
                 <motion.div
@@ -156,7 +159,8 @@ export default function Landing() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 + i * 0.1 }}
-                  className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:cyber-glow transition-all group"
+                  onClick={() => navigate(feature.path)}
+                  className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:cyber-glow transition-all group cursor-pointer"
                 >
                   <feature.icon className={`h-12 w-12 mb-4 ${feature.color} group-hover:scale-110 transition-transform`} />
                   <h3 className="text-xl font-bold mb-2 text-primary">{feature.title}</h3>
