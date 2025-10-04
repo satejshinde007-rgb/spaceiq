@@ -109,8 +109,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Jupiter",
       type: "planet",
-      thumbnail: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400",
-      images: ["https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=400",
+      images: ["https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=800"],
       shortDesc: "Gas giant with the Great Red Spot storm.",
       description: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It's a gas giant with a mass more than two and a half times that of all the other planets combined.",
       facts: [
@@ -157,8 +157,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Neptune",
       type: "planet",
-      thumbnail: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=400",
-      images: ["https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=400",
+      images: ["https://images.unsplash.com/photo-1614732484003-ef9881555dc3?w=800"],
       shortDesc: "The windiest planet in the Solar System.",
       description: "Neptune is the eighth and farthest known planet from the Sun. It's the fourth-largest planet by diameter and the third-most-massive planet. Neptune has the strongest winds in the Solar System.",
       facts: [
@@ -205,8 +205,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Sirius",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
-      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=400",
+      images: ["https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=800"],
       shortDesc: "The brightest star in Earth's night sky.",
       description: "Sirius, also known as the Dog Star, is the brightest star in the night sky. It's actually a binary star system consisting of a main-sequence star and a white dwarf companion.",
       facts: [
@@ -237,8 +237,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Proxima Centauri",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
-      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1464802686167-b939a6910659?w=400",
+      images: ["https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800"],
       shortDesc: "The closest star to our Solar System.",
       description: "Proxima Centauri is a red dwarf star and the closest known star to the Sun. It's part of the Alpha Centauri star system and has at least two confirmed exoplanets.",
       facts: [
@@ -253,8 +253,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Polaris",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
-      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=400",
+      images: ["https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800"],
       shortDesc: "The North Star, a navigation beacon for centuries.",
       description: "Polaris, also known as the North Star, is a yellow supergiant and the brightest star in the constellation Ursa Minor. It's famous for its position almost directly above Earth's North Pole.",
       facts: [
@@ -269,8 +269,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Milky Way",
       type: "galaxy",
-      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
-      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=400",
+      images: ["https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800"],
       shortDesc: "Our home galaxy containing billions of stars.",
       description: "The Milky Way is the galaxy that includes our Solar System. It's a barred spiral galaxy with an estimated 100-400 billion stars.",
       facts: [
