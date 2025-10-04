@@ -127,16 +127,19 @@ export default function OverviewSection({ onExplore }: OverviewSectionProps) {
             title: "Planets & Moons",
             desc: "Discover our solar system",
             icon: "🪐",
+            action: onExplore,
           },
           {
             title: "Stars & Galaxies",
             desc: "Journey beyond our neighborhood",
             icon: "⭐",
+            action: onExplore,
           },
           {
             title: "Test Your Knowledge",
             desc: "Challenge yourself with our quiz",
             icon: "🧠",
+            action: onExplore,
           },
         ].map((feature, i) => (
           <motion.div
@@ -144,9 +147,10 @@ export default function OverviewSection({ onExplore }: OverviewSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 + i * 0.1 }}
-            className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:cyber-glow transition-all"
+            onClick={feature.action}
+            className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:cyber-glow transition-all cursor-pointer group"
           >
-            <div className="text-4xl mb-3">{feature.icon}</div>
+            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{feature.icon}</div>
             <h3 className="text-xl font-bold mb-2 text-primary">{feature.title}</h3>
             <p className="text-muted-foreground">{feature.desc}</p>
           </motion.div>
