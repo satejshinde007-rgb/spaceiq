@@ -39,9 +39,6 @@ export default function InformationSection() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center space-y-4"
       >
-        <h2 className="text-4xl md:text-5xl font-bold cyber-text-glow text-primary">
-          COSMIC DATABASE
-        </h2>
         <p className="text-muted-foreground text-lg">
           Explore celestial objects across the universe
         </p>
