@@ -10,7 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import type { Id } from "@/convex/_generated/dataModel";
 
 export default function InformationSection() {
-  const [selectedType, setSelectedType] = useState<"all" | "planet" | "moon" | "star" | "galaxy" | "satellite">("all");
+  const [selectedType, setSelectedType] = useState<"all" | "planet" | "star" | "galaxy" | "satellite">("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedObjectId, setSelectedObjectId] = useState<Id<"spaceObjects"> | null>(null);
 
@@ -27,7 +27,6 @@ export default function InformationSection() {
   const types = [
     { value: "all", label: "All", icon: "🌌" },
     { value: "planet", label: "Planets", icon: "🪐" },
-    { value: "moon", label: "Moons", icon: "🌙" },
     { value: "star", label: "Stars", icon: "⭐" },
     { value: "galaxy", label: "Galaxies", icon: "🌀" },
     { value: "satellite", label: "Satellites", icon: "🛰️" },

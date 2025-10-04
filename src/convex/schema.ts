@@ -37,7 +37,6 @@ const schema = defineSchema(
       name: v.string(),
       type: v.union(
         v.literal("planet"),
-        v.literal("moon"),
         v.literal("star"),
         v.literal("galaxy"),
         v.literal("satellite")

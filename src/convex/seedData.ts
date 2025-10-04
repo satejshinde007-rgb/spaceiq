@@ -172,7 +172,7 @@ export const seedAll = internalMutation({
 
     await ctx.db.insert("spaceObjects", {
       name: "Moon",
-      type: "moon",
+      type: "star",
       thumbnail: "https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=400",
       images: ["https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=800"],
       shortDesc: "Earth's only natural satellite.",
@@ -200,6 +200,70 @@ export const seedAll = internalMutation({
       ],
       interestingFact: "One million Earths could fit inside the Sun",
       distance: "Center of Solar System",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Sirius",
+      type: "star",
+      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
+      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      shortDesc: "The brightest star in Earth's night sky.",
+      description: "Sirius, also known as the Dog Star, is the brightest star in the night sky. It's actually a binary star system consisting of a main-sequence star and a white dwarf companion.",
+      facts: [
+        "Distance: 8.6 light years from Earth",
+        "Temperature: 9,940°C surface",
+        "25 times more luminous than the Sun"
+      ],
+      interestingFact: "Sirius is gradually moving closer to our Solar System",
+      distance: "8.6 light years from Earth",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Betelgeuse",
+      type: "star",
+      thumbnail: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400",
+      images: ["https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800"],
+      shortDesc: "A red supergiant star in the constellation Orion.",
+      description: "Betelgeuse is a red supergiant star and one of the largest stars visible to the naked eye. It's nearing the end of its life and could explode as a supernova anytime in the next 100,000 years.",
+      facts: [
+        "Distance: 642 light years from Earth",
+        "Diameter: 700 times larger than the Sun",
+        "Temperature: 3,500°C surface"
+      ],
+      interestingFact: "If Betelgeuse replaced our Sun, it would extend past Mars' orbit",
+      distance: "642 light years from Earth",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Proxima Centauri",
+      type: "star",
+      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
+      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
+      shortDesc: "The closest star to our Solar System.",
+      description: "Proxima Centauri is a red dwarf star and the closest known star to the Sun. It's part of the Alpha Centauri star system and has at least two confirmed exoplanets.",
+      facts: [
+        "Distance: 4.24 light years from Earth",
+        "Temperature: 3,042°C surface",
+        "Much smaller and cooler than the Sun"
+      ],
+      interestingFact: "It would take over 6,000 years to reach Proxima Centauri with current spacecraft",
+      distance: "4.24 light years from Earth",
+    });
+
+    await ctx.db.insert("spaceObjects", {
+      name: "Polaris",
+      type: "star",
+      thumbnail: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=400",
+      images: ["https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=800"],
+      shortDesc: "The North Star, a navigation beacon for centuries.",
+      description: "Polaris, also known as the North Star, is a yellow supergiant and the brightest star in the constellation Ursa Minor. It's famous for its position almost directly above Earth's North Pole.",
+      facts: [
+        "Distance: 433 light years from Earth",
+        "Actually a triple star system",
+        "2,500 times more luminous than the Sun"
+      ],
+      interestingFact: "Polaris hasn't always been the North Star and won't be in the future due to Earth's axial precession",
+      distance: "433 light years from Earth",
     });
 
     await ctx.db.insert("spaceObjects", {
