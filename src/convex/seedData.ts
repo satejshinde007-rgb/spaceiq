@@ -253,8 +253,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Polaris",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=400",
-      images: ["https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400",
+      images: ["https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800"],
       shortDesc: "The North Star, a navigation beacon for centuries.",
       description: "Polaris, also known as the North Star, is a yellow supergiant and the brightest star in the constellation Ursa Minor. It's famous for its position almost directly above Earth's North Pole.",
       facts: [
