@@ -141,7 +141,7 @@ export default function Landing() {
                 },
                 {
                   icon: Sparkles,
-                  title: "Cosmic Database",
+                  title: "Info",
                   desc: "Searchable information on celestial objects across the universe",
                   color: "text-secondary",
                   path: "/dashboard?tab=info",
