@@ -26,7 +26,7 @@ export default function QuizSection() {
   const submitScore = useMutation(api.quiz.submitScore);
   const verifyAnswer = useQuery(
     api.quiz.verifyAnswer,
-    quizState === "playing" && selectedAnswer !== null && questions
+    quizState === "playing" && selectedAnswer !== null && questions && questions[currentQuestionIndex]
       ? {
           questionId: questions[currentQuestionIndex]._id as Id<"quizQuestions">,
           selectedIndex: selectedAnswer,
@@ -36,7 +36,7 @@ export default function QuizSection() {
 
   // Timer
   useEffect(() => {
-    if (quizState !== "playing") return;
+    if (quizState !== "playing" || !questions || !questions[currentQuestionIndex]) return;
 
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
@@ -49,7 +49,7 @@ export default function QuizSection() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [quizState, currentQuestionIndex]);
+  }, [quizState, currentQuestionIndex, questions]);
 
   // Check answer when verified
   useEffect(() => {
@@ -226,6 +226,16 @@ export default function QuizSection() {
   // Playing
   if (quizState === "playing") {
     const currentQuestion = questions[currentQuestionIndex];
+    
+    // Add safety check for undefined question
+    if (!currentQuestion) {
+      return (
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <Loader2 className="h-12 w-12 animate-spin text-primary" />
+        </div>
+      );
+    }
+    
     const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
     return (
