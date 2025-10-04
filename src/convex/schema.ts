@@ -32,12 +32,52 @@ const schema = defineSchema(
       role: v.optional(roleValidator), // role of the user. do not remove
     }).index("email", ["email"]), // index for the email. do not remove or modify
 
-    // add other tables here
+    // Space objects (planets, moons, stars, galaxies, satellites)
+    spaceObjects: defineTable({
+      name: v.string(),
+      type: v.union(
+        v.literal("planet"),
+        v.literal("moon"),
+        v.literal("star"),
+        v.literal("galaxy"),
+        v.literal("satellite")
+      ),
+      thumbnail: v.string(),
+      images: v.array(v.string()),
+      shortDesc: v.string(),
+      description: v.string(),
+      facts: v.array(v.string()),
+      interestingFact: v.string(),
+      distance: v.optional(v.string()),
+    })
+      .index("by_type", ["type"])
+      .searchIndex("search_name", {
+        searchField: "name",
+      }),
 
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    // Quiz questions
+    quizQuestions: defineTable({
+      question: v.string(),
+      options: v.array(v.string()),
+      correctIndex: v.number(),
+      category: v.string(),
+    }),
+
+    // Quiz scores for leaderboard
+    quizScores: defineTable({
+      playerName: v.string(),
+      score: v.number(),
+      total: v.number(),
+      userId: v.optional(v.id("users")),
+    }).index("by_score", ["score"]),
+
+    // Hero images for overview section
+    heroImages: defineTable({
+      title: v.string(),
+      imageUrl: v.string(),
+      caption: v.string(),
+      order: v.number(),
+    }).index("by_order", ["order"]),
   },
   {
     schemaValidation: false,
