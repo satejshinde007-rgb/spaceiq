@@ -8,7 +8,6 @@ export const list = query({
         v.literal("planet"),
         v.literal("star"),
         v.literal("galaxy"),
-        v.literal("satellite"),
         v.literal("all")
       )
     ),
@@ -25,7 +24,7 @@ export const list = query({
     if (args.type && args.type !== "all") {
       return await ctx.db
         .query("spaceObjects")
-        .withIndex("by_type", (q) => q.eq("type", args.type as "planet" | "star" | "galaxy" | "satellite"))
+        .withIndex("by_type", (q) => q.eq("type", args.type as "planet" | "star" | "galaxy"))
         .collect();
     }
 
@@ -46,8 +45,7 @@ export const create = mutation({
     type: v.union(
       v.literal("planet"),
       v.literal("star"),
-      v.literal("galaxy"),
-      v.literal("satellite")
+      v.literal("galaxy")
     ),
     thumbnail: v.string(),
     images: v.array(v.string()),

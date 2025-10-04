@@ -173,8 +173,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Moon",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=400",
-      images: ["https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=400",
+      images: ["https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=800"],
       shortDesc: "Earth's only natural satellite.",
       description: "The Moon is Earth's only natural satellite and the fifth largest moon in the Solar System. It's the brightest object in the night sky.",
       facts: [
@@ -280,22 +280,6 @@ export const seedAll = internalMutation({
       ],
       interestingFact: "The Milky Way is on a collision course with Andromeda galaxy",
       distance: "We are inside it",
-    });
-
-    await ctx.db.insert("spaceObjects", {
-      name: "ISS",
-      type: "satellite",
-      thumbnail: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=400",
-      images: ["https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800"],
-      shortDesc: "International Space Station orbiting Earth.",
-      description: "The International Space Station is a modular space station in low Earth orbit. It's a multinational collaborative project involving NASA, Roscosmos, JAXA, ESA, and CSA.",
-      facts: [
-        "Orbits Earth every 90 minutes",
-        "Altitude: 408 km above Earth",
-        "Continuously inhabited since 2000"
-      ],
-      interestingFact: "The ISS travels at 28,000 km/h",
-      distance: "408 km above Earth",
     });
 
     // Seed quiz questions
