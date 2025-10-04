@@ -189,8 +189,8 @@ export const seedAll = internalMutation({
     await ctx.db.insert("spaceObjects", {
       name: "Sun",
       type: "star",
-      thumbnail: "https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=400",
-      images: ["https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=800"],
+      thumbnail: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=400",
+      images: ["https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=800"],
       shortDesc: "The star at the center of our Solar System.",
       description: "The Sun is the star at the center of the Solar System. It's a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field.",
       facts: [
